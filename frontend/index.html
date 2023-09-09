@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Phishify</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/mainlogo.jpeg" rel="icon" />
+
+  <!--==================== UNICONS ====================-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+  <!--==================== SWIPER CSS ====================-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto"><a href="index.html">Phishify</a></h1>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#usecases">Usecases</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Home Section ======= -->
+  <section id="home" class="home d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+      <h1>Phishify</h1>
+      <form action="" method="post" role="form" class="form">
+        <div class="row no-gutters">
+          <div class="col-md-6 form-group pr-md-1">
+            <input type="text" name="name" class="form-control" id="name"
+              placeholder="Enter a URL link in format http or https and should contain www" />
+          </div>
+        </div>
+        <div class="text-center">
+          <button id="predict" class="btn btn-danger" onclick="predictURL()" type="button">
+            Predict
+          </button>
+          <button id="reset" class="btn btn-primary" onclick="resetPage()" type="button">
+            Reset
+          </button>
+        </div>
+      </form>
+      <div class="result-container" style="display: none;">
+        <p>Prediction Result: <span id="prediction-result"></span></p>
+        <p>Phishing Probability: <span id="phishing-probability"></span></p>
+      </div>
+      
+      <img src="assets/img/home.jpg" class="img-fluid home-img" alt="" data-aos="zoom-in" data-aos-delay="400" />
+    </div>
+  </section>
+  
+  <!-- End home -->
+
+  <main id="main">
+    <!-- ======= about Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About Phishify</h2>
+          <div class="about-description">
+          <p>
+            Phishify is a final year project for “Detection of Phishing Website Using Machine Learning”. It aims to help
+            reduce phishing attack by helping internet users authenticate URL link by testing if it is phishing or
+            legitimate. The progress of validating a Website URL for phishing or legitimate has gone through several
+            Machine learning models. This project aims to develop a machine learning model that can detect phishing
+            websites automatically. Phishing websites are fraudulent websites that mimic legitimate websites to trick
+            users into providing sensitive information such as login credentials, credit card details, or personal
+            information.
+          </p>
+          <br>
+          <p>
+            The machine learning model has be trained on a dataset of known phishing websites and legitimate websites
+            to learn the characteristics and patterns that differentiate them. Features such as the website's URL,
+            domain name, content will be extracted and used as input to the machine learning
+            algorithm.
+          </p>
+          <br>
+          <p>
+            Once trained, the model is be able to classify new websites as either legitimate or phishing based on
+            their features. The model will be evaluated using metrics such as accuracy, precision to assess its
+            performance.
+          </p>
+          <br>
+          <p>
+            The project involves data collection, preprocessing, feature engineering, model selection, and
+            evaluation. The programming language used is Python, and popular machine learning libraries such as
+            Scikit-learn, numpy, pandas and matplotlib have be used for model development and training.
+          </p>
+          <br>
+          <p>
+            The goal of this project is to develop an effective and efficient solution for detecting phishing websites
+            to improve online security and protect users from fraud and identity theft.
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End about Section -->
+
+
+
+
+
+    <!-- ======= Usecases ======= -->
+    <section id="usecases" class="usecases">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Use Cases</h2>
+          <h4 style="text-align: center; margin-top: 10px; font-size: 23px; font-weight: 700;">Use case Scenarios of
+            Phishing attack (Data Breach due to Phishing Attack)</h4>
+        </div>
+        <div class="usecases-list" style="margin-top: 25px;">
+          <ul>
+            <li data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse"
+                href="#usecases-list-1">Use Case Scenarios #1 <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="usecases-list-1" class="collapse show" data-parent=".usecases-list">
+                <p>
+                  One of the Biggest Data Breaches from Phishing: <br><br> John Podesta’s Email
+                  There was a lot of controversy surrounding the November 2016 election on both sides of the political
+                  spectrum. One of the most notable was the hack of John Podesta’s Gmail account. Podesta, chairman of
+                  presidential candidate Hillary Clinton’s democratic election campaign, found himself as one of the
+                  country’s top phishing attack examples when his account was victimized by a Russian hacker group known
+                  as Fancy Bear. The phishers, pretending to be Google, sent an email saying that he needed to change
+                  his email after an attempted hack occurred. However, in true phishing attack fashion, the email linked
+                  to a malicious website. When someone with access to Podesta’s email used the compromised link, the
+                  hackers gained access to his account. This led to the eventual release of thousands of Podesta’s
+                  emails via WikiLeaks in the weeks leading up to the November election.
+
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#usecases-list-2"
+                class="collapsed">Use Case Scenarios #2 <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="usecases-list-2" class="collapse" data-parent=".usecases-list">
+                <p>
+                  One of the Biggest Data Breaches from Phishing: <br><br> BenefitMall
+                  Among the most recent phishing attacks reported by the media is one that affected BenefitMall, a human
+                  resource, employee benefits, and payroll administration solutions company. Between June 2018 and
+                  October 2018, the company’s website was accessed via employee email login credentials that were
+                  exposed during an email phishing attack, according to a press release. The types of consumer
+                  information left exposed in the affected mailboxes are thought to include:
+                  <br> <i class='bx bxs-chevron-right-circle icon-circle'></i> Names <br><br>
+                  <i class='bx bxs-chevron-right-circle icon-circle'></i> Email addresses <br><br>
+                  <i class='bx bxs-chevron-right-circle icon-circle'></i> Birth dates <br><br>
+                  <i class='bx bxs-chevron-right-circle icon-circle'></i> Bank account information <br><br>
+                  <i class='bx bxs-chevron-right-circle icon-circle'></i> Insurance premium payment information <br><br>
+                  Although the full extent of the attack is not yet known, BenefitMall works with “a network of more
+                  than 20,000 Trusted Advisors” to serve more than “200,000 small and medium-sized businesses.” This
+                  leaves a potentially enormous group of employees and businesses at risk.
+
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#usecases-list-3"
+                class="collapsed">Use Case Scenarios #3<i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="usecases-list-3" class="collapse" data-parent=".usecases-list">
+                <p>
+                  One of the Biggest Data Breaches from Phishing: <br><br> Sony Pictures
+                  In retaliation for the creation of the movie “The Interview,” a film about the plot to kill North
+                  Korea’s head of state, a North Korean government-backed hacker group launched a devastating attack on
+                  the entertainment giant in November 2014. Using phishing and spear-phishing emails, which contained
+                  malware, the attackers gained access to Sony’s network and performed months of covert reconnaissance.
+
+                  Once inside, they also threatened company employees and executives, stole confidential data, and
+                  disabled thousands of the company’s computers. The attack is thought to have cost the company upwards
+                  of $100 million.
+
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#usecases-list-4"
+                class="collapsed">Use Case Scenarios #4<i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="usecases-list-4" class="collapse" data-parent=".usecases-list">
+                <p>
+                  Methodist Hospitals – Gary, Indiana
+                  In August of 2019, investigators confirmed Methodist Hospitals’ worst fear. A phishing attack
+                  compromised more than 68,000 patients’ information. The hospital did not discover the breach until
+                  June when an employee reported suspicious activity in their email account. The investigation revealed
+                  that at least two email accounts had been compromised.
+
+                  The data obtained from each affected patient varied but included the following: names, addresses,
+                  health insurance information, Social Security numbers, passport numbers, bank account numbers,
+                  electronic signatures, login credentials, dates of birth, treatment information, and insurance
+                  information.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#usecases-list-5"
+                class="collapsed">Use Case Scenarios #5<i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="usecases-list-5" class="collapse" data-parent=".usecases-list">
+                <p>
+                  The University of Wisconsin-Parkside – Kenosha, Wisconsin
+                  In June of 2019, the University of Wisconsin-Parkside was notified of a new bank account. This new
+                  account was a result of a phishing attack where an employee was prompted to change the routing numbers
+                  of two UW system vendors. Before discovering the issues, the university lost $315,000 in fraudulent
+                  bank transfers.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End of usecases -->
+
+
+    <!--==================== Team Members ====================-->
+    <section class="team section" id="team">
+      <div class="section-title">
+        <h2>Team Members</h2>
+        <div class="team_container container swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!--==================== Member 1 ====================-->
+            <div class="team_content grid swiper-slide">
+              <img src="assets/img/jg.png" alt="" class="member_img">
+
+              <div class="member_data">
+                <h3 class="member_name">Jatin Gupta</h3>
+                <p class="member_description">I am from Agra, Uttar Pradesh currently, I am pursuing my Bachelors of
+                  Technology degree from Ajay Kumar Garg Engineering College, Ghaziabad. My degree emphasis is in
+                  Computer Science. I aspire to become a software developer. While working on this project I have
+                  acquired skills in the domain of machine learning specifically various algorithms that are used to
+                  train the the model. I have experience in several web development technologies such as HTML, CSS,
+                  JavaScript, Node.js.</p>
+
+              </div>
+            </div>
+
+            <!--==================== Member 2 ====================-->
+            <div class="team_content grid swiper-slide">
+              <img src="assets/img/" alt="" class="member_img">
+
+              <div class="member_data">
+                <h3 class="member_name">Abishek</h3>
+                <p class="member_description">I am a computer science undergraduate from Ajay Kumar Garg Engineering
+                  College, Ghaziabad with a specialization in machine learning. Have experience working on various
+                  projects related to natural language processing and computer vision using python. I was assigned the
+                  task for increasing accuracy of the developed system by impling various machine learning models.
+                  During this project, I gained experience in data preprocessing, model training.</p>
+
+              </div>
+            </div>
+
+            <!--==================== Member 3 ====================-->
+            <div class="team_content grid swiper-slide">
+              <img src="assets/img/dj.jpg" alt="" class="member_img">
+
+              <div class="member_data">
+                <h3 class="member_name">Dhaval Jain</h3>
+                <p class="member_description">I am from Baraut, currently pursuing Bachelors of Technology in the
+                  department of Computer Science from Ajay Kumar Garg Engineering College, Ghaziabad. I possess good
+                  knowledge and experience in developing user interfaces and web applications. During the project I was
+                  handling the designing and developing the user interface of the web application, ensuring its
+                  usability and functionality. I also implemented different supervised machine learning algorithms to
+                  trace out the efficiency of different models and stored the most accurate model in the final output.
+                </p>
+
+              </div>
+            </div>
+
+            <!--==================== Member 4 ====================-->
+            <div class="team_content grid swiper-slide">
+              <img src="assets/img/hk.jpg" alt="" class="member_img">
+
+              <div class="member_data">
+                <h3 class="member_name">Harsh Kumar</h3>
+                <p class="member_description">I am a computer science undergraduate from Ajay Kumar Garg Engineering
+                  College,Ghaziabad with extensive expertise in developing backend functionalities for web applications.
+                  Consisting experience for working on various projects related to backend development using modern web
+                  technologies such as python, Django etc. During the project, I was responsible for designing and
+                  developing the backend functionality of web application, ensuring its usability and functionality.
+                  With the skills and experience, I was able to create a user-friendly interface that met the project
+                  requirements and provide an intuitive experience for users.</p>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!--==================== ADD ARROWS ====================-->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-team-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-team-icon"></i>
+          </div>
+
+          <!--==================== ADD PAGINATION ====================-->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-md-flex">
+      <div class="text-center text-md-center">
+        <div class="copyright">
+
+          <p style="padding-top: 8px; font-weight: 600;">Final Year Project &copy; 2023. All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!--==================== SWIPER JS ====================-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function predictURL() {
+  var url = document.getElementById("name").value;
+  if (url == "") {
+    alert("ENTER A URL");
+  } else {
+    if (url.includes("http")) {
+      document.getElementById("predict").innerHTML = "Predicting ...";
+
+      fetch("http://127.0.0.1:8000/predict/", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          url: url,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          // Handle the API response here
+          console.log(data);
+          document.getElementById("predict").innerHTML = "Predicted";
+          document.getElementById("predict").class = "btn btn-success";
+          var predictionResult = document.getElementById("prediction-result");
+          var phishingProbability = document.getElementById("phishing-probability");
+          var resultContainer = document.querySelector(".result-container");
+
+          predictionResult.textContent = data.prediction == 0 ? "Deemed suspicious" : "Deemed non-suspicious";
+          if (data.prediction == 0) {
+            predictionResult.classList.add("phishing");
+          }
+          phishingProbability.textContent = (data.probability_phishing * 100).toFixed(2) + "%";
+          resultContainer.style.display = "block";
+        })
+        .catch((error) => {
+          console.error("There was a problem with the fetch operation:", error);
+        });
+    } else {
+      alert("URL MUST CONTAIN HTTPS OR HTTP");
+    }
+  }
+}
+
+function resetPage() {
+  console.log("HELLO");
+  location.reload();
+}
+
+  </script>
+  
+</body>
+
+</html>
