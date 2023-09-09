@@ -2,7 +2,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-This project focuses on detecting phished URLs using machine learning techniques. It utilizes Django and Django REST Framework to create an API for URL classification. The project includes feature extraction, model training, and deployment for real-time URL classification.
+## Introduction
+This project focuses on detecting phished URLs using machine learning techniques. It utilizes Django and Django REST Framework to create an API for URL classification. The project includes feature extraction, model training, and deployment for real-time URL classification. Frontend technologies consisting HTML, CSS, JacaScript, Bootstrap have been employed for designing and developing UI.
 
 ## Features
 
