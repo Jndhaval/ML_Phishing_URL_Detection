@@ -5,6 +5,9 @@
 ## Introduction
 This project focuses on detecting phished URLs using machine learning techniques. It utilizes Django and Django REST Framework to create an API for URL classification. The project includes feature extraction, model training, and deployment for real-time URL classification. Frontend technologies consisting HTML, CSS, JacaScript, Bootstrap have been employed for designing and developing UI.
 
+![photo_2023-09-12_14-16-09](https://github.com/Jndhaval/ML_Phishing_URL_Detection/assets/61612894/7ecfada0-e59a-49f5-9666-eb2c72851755)
+
+
 ## Features
 
 - Phished URL detection using machine learning algorithms
