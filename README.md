@@ -7,6 +7,9 @@ This project focuses on detecting phished URLs using machine learning techniques
 
 ![photo_2023-09-12_14-16-09](https://github.com/Jndhaval/ML_Phishing_URL_Detection/assets/61612894/7ecfada0-e59a-49f5-9666-eb2c72851755)
 
+![image](https://github.com/Jndhaval/ML_Phishing_URL_Detection/assets/61612894/1ff155be-0c76-4882-8688-f3c09a054df2)
+
+
 
 ## Features
 
