@@ -39,7 +39,7 @@ To get started with this project, follow these steps:
 ## Usage
 - Visit the homepage to access the URL classification interface.
 - Enter a URL in the provided input field.
-- Click the "Classify" button to initiate the classification process.
+- Click the "Predict" button to initiate the classification process.
 - The system will analyze the URL using the pre-trained Gradient Boosting model.
 - The classification result (phished or not phished) will be displayed on the page.
 
